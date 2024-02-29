@@ -172,12 +172,11 @@ print("\n\n")
 // для кожного міста, що є у масиві weatherInCities
 print("---------- ЕКРАН 2 ----------")
 for index in 0 ..< weatherInCities.count {
-    let _ = index
     let weatherInfo = weatherInCities[index]
     let city = weatherInfo.0
-    let celsies = weatherInfo.1 - kelvinZero
+    let celsius = weatherInfo.1 - kelvinZero
     
-    print("\n\(city):\nt: \(String(format: "%.1f", celsies)) C")
+    print("\n\(city):\nt: \(String(format: "%.1f", celsius)) C")
 }
 print("\n-----------------------------")
 print("\n\n")
@@ -188,7 +187,6 @@ print("\n\n")
 // для кожного міста, що є у масиві weatherInCities
 print("---------- ЕКРАН 3 ----------")
 for index in 0 ..< weatherInCities.count {
-    let _ = index
     let weatherInfo = weatherInCities[index]
     let city = weatherInfo.0
     let fahrenheit = (weatherInfo.1 * fahrenheitMultiplier - fahrenheitConstant)
